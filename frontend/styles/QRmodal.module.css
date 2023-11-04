@@ -14,7 +14,8 @@
 
 .modalContent {
   background-color: black;
-  border: 5px solid white;
+  outline: 0.5rem solid rgb(78, 68, 206)
+;
   border-radius: 5px;
   padding: 100px;
   position: fixed;

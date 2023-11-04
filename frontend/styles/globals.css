@@ -24,11 +24,11 @@ body {
 
 .generateqr {
   cursor: pointer;
-  box-shadow: rgba(142, 142, 158, 0.4) 0px 7px 29px 0px;
+  box-shadow: rgba(78, 68, 206, 0.4) 0px 7px 29px 0px;
 
 }
 .generateqr:hover{
-  box-shadow : rgba(111, 111, 122, 0.8) 0px 7px 29px 0px;
+  box-shadow : rgba(78, 68, 206, 0.8) 0px 0px 29px 0px;
 
 }
 

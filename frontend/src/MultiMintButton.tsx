@@ -64,9 +64,9 @@ export const CTAButton = styled.button`
   background: none;
   padding:20px;
   background-color: #6052D3;
-  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
   &:hover {
-    box-shadow : rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+    box-shadow : rgba(0, 0, 0, 0.4) 0px 7px 29px 0px;
   }
 `;
 export const ButtonWrap = styled.div`
@@ -84,6 +84,7 @@ export const ButtonWrap = styled.div`
   font-size: 20px;
   line-height: 150%;
   text-transform: uppercase;
+  max-width:650px;
 `
 export const NumberWrap = styled.div`
   display: flex;
@@ -92,7 +93,7 @@ export const NumberWrap = styled.div`
   align-items: stretch;
   padding: 16px;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 6px;  
 `
 

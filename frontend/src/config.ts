@@ -9,32 +9,23 @@ export const rpcHost =
 
 export const candyMachineId = new PublicKey(
   process.env.NEXT_PUBLIC_CANDY_MACHINE_ID ||
-    "3zwFR3spiwbSSMtvVKG2bRT6ttqFoC3MHCafGP8ZrdLz"
+    "4MS6RVfLMkSWPHTMfNXxJhuPNgbTWsD3Smn8YG88gc86"
 );
 export const defaultGuardGroup =
   process.env.NEXT_PUBLIC_DEFAULT_GUARD_GROUP || undefined; // undefined means default
 
-// "qasJ6jhgtngKk2QnEPdDjuFH8NMoM58W8TxPBXAChPY"
-// "3zwFR3spiwbSSMtvVKG2bRT6ttqFoC3MHCafGP8ZrdLz"
-// "DAA8yRLu7acVs3kxaTyCjoEjNWGinLaCKVhDY29ASNua"
 
 export const whitelistedWallets = [
-  "53VVFtLzzi3nL2p1QF591PAB8rbcbsirYepwUphtHU9Q",
-  "85gHs1pKkZcNCDEbcfxqhfFNPWCsNFqPTMMbTQARspWy",
-  "FXoth7ba7LALmJGFaidCcMnhsxEagBDBDKCmkpr2QuDr",
-  "232Z5QNvQ4wRyraGWFpC5i3HEbqozEWgBCV95eWASaG1",
-  "D8ivzpXkG66VknRdVjEF1HjqS3T1tzcqraVR6FYaeLsV",
-  "sTAKERL4U8fbn2nUte6rPVdcrz2z3fEh1adQEDrGULr",
 ];
 
 export const collectionImageURL =
-  process.env.NEXT_PUBLIC_COLLECTION_IMAGE_URL || "https://images.pexels.com/photos/2832432/pexels-photo-2832432.png";
+  process.env.NEXT_PUBLIC_COLLECTION_IMAGE_URL || "/pass.jpg";
 
 export const collectionTitle =
-  process.env.NEXT_PUBLIC_COLLECTION_TITLE || "Test x Pass";
+  process.env.NEXT_PUBLIC_COLLECTION_TITLE || "OG Pass";
 
 export const collectionDescription =
-  process.env.NEXT_PUBLIC_COLLECTION_DESCRIPTION || "";
+  process.env.NEXT_PUBLIC_COLLECTION_DESCRIPTION || "A meticulously crafted exhibit to highlight the efficiency and security of our blockchain-based ticketing system. Mint an NFT, grab your QR-code and you're set to be checked in to the venue!";
 
 export const tokenType =
   process.env.NEXT_PUBLIC_TOKEN_TYPE || "Token";

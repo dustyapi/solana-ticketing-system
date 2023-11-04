@@ -10,7 +10,7 @@ import Link from "next/link";
 import Countdown from "react-countdown";
 
 import { useEffect, useMemo, useState } from "react";
-import styled from "styled-components";
+import styled , { keyframes } from "styled-components";
 import { GatewayProvider } from "@civic/solana-gateway-react";
 import { defaultGuardGroup, network } from "./config";
 
@@ -40,6 +40,8 @@ import QRmodal from "./QRmodal";
 
 const BorderLinearProgress = styled(LinearProgress)`
   height: 16px !important;
+  max-width:700px;
+
   border-radius: 30px;
   background-color: var(--alt-background-color) !important;
   > div.MuiLinearProgress-barColorPrimary {
@@ -96,17 +98,34 @@ const Other = styled.div`
   gap: 48px;
   width: 100%;
 `;
+const glowAnimation = keyframes`
+  0% {
+    box-shadow: 0 0 2px rgba(93, 16, 192, 0.7)
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(93, 16, 192, 0.7)
+  }
+  100% {
+    box-shadow: 0 0 2px rgba(93, 16, 192, 0.7)
+  }
+`;
+
 const ImageWrap = styled.div`
-  aspect-ratio: 1 / 1;
-  width: 100%;
+  aspect-ratio: 4/3;
+  width: 80%;
+  margin-left:2rem;
   background-image: url(${collectionImageURL});
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 50px;
+  animation: ${glowAnimation} 1.5s ease-in-out infinite;
 `;
+
 const Image = styled.div`
-  height: 100%
+  height: 100%;
   width: 100%;
 `;
+
+export { ImageWrap, Image };
 const CollectionName = styled.h1`
   font-weight: 800;
   font-size: 64px;
@@ -160,6 +179,7 @@ const CollectionDescription = styled.p`
   font-size: 20px;
   line-height: 150%;
   color: var(--white);
+  max-width:720px;
 `;
 const MintedByYou = styled.span`
   font-style: italic;
@@ -532,7 +552,7 @@ const Home = (props: HomeProps) => {
   ) {
     candyPrice = `◎ ${solCost}`;
   } else {
-    candyPrice = "1 NFT";
+    candyPrice = "1 SOL";
   }
 
   // console.log(candyPrice);
@@ -600,7 +620,7 @@ const Home = (props: HomeProps) => {
             </Wallet>
           </WalletContainer>
         </Header>
-        <Section>
+        <Section >
           <Container>
             <Column>
               <ImageWrap>

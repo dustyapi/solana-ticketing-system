@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore";
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: process.env.NEXT_FIREBASE_API_KEY,
   authDomain: "solana-ticketing-system.firebaseapp.com",
   projectId: "solana-ticketing-system",
   storageBucket: "solana-ticketing-system.appspot.com",
