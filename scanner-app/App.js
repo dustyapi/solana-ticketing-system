@@ -91,9 +91,9 @@ export default function App() {
 ScannerScreen.navigationOptions = {
   title: "Scanner",
   headerStyle: {
-    backgroundColor: "white", // Change the color value to the desired color
+    backgroundColor: "#4E44CE", // Change the color value to the desired color
   },
-  headerTintColor: "black", // Change the color value to the desired color
+  headerTintColor: "white", // Change the color value to the desired color
 };
 const styles = StyleSheet.create({
   container: {
@@ -101,13 +101,15 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#87F1AF"
+    backgroundColor: "black"
 
   },
   contentContainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "black"
+
   },
   buttonContainer: {
     height: 100,
@@ -117,7 +119,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     color: "white",
-    marginTop:30
+    margin:30
   },
   button: {
     backgroundColor:"#4E56CE",
@@ -132,11 +134,12 @@ const styles = StyleSheet.create({
   qrCodeItem: {
     marginBottom: 10,
     padding: 10,
-    backgroundColor: "#eaeaea",
+    backgroundColor: "#4E44CE",
     borderRadius: 5,
 
   },
   qrCodeText: {
     fontSize: 16,
+    color:"white",
   },
 });
