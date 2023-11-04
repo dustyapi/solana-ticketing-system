@@ -22,11 +22,12 @@ import { tokenType } from "./config";
 import { websiteURL } from "./config";
 import { twitterURL } from "./config";
 import { discordURL } from "./config";
+import "./QRmodal";
 import { MultiMintButton } from "./MultiMintButton";
 //import { MintButton } from "./MintButton";
 import { MintCount, Section, Container, Column } from "./styles";
 import { AlertState } from "./utils";
-
+import NftsModal from "./NftsModal";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import useCandyMachineV3 from "./hooks/useCandyMachineV3";
 import {
@@ -35,6 +36,7 @@ import {
   ParsedPricesForUI,
 } from "./hooks/types";
 import { guardToLimitUtil } from "./hooks/utils";
+import QRmodal from "./QRmodal";
 
 const BorderLinearProgress = styled(LinearProgress)`
   height: 16px !important;
@@ -530,7 +532,7 @@ const Home = (props: HomeProps) => {
   ) {
     candyPrice = `◎ ${solCost}`;
   } else {
-    candyPrice = "1 SOL";
+    candyPrice = "1 NFT";
   }
 
   // console.log(candyPrice);
@@ -600,9 +602,55 @@ const Home = (props: HomeProps) => {
         </Header>
         <Section>
           <Container>
-                
             <Column>
-                
+              <ImageWrap>
+                <Image></Image>
+              </ImageWrap>
+            </Column>
+            <Column>
+              <Content>
+                <CollectionName>{collectionTitle}</CollectionName>
+                <InfoRow>
+                  {guardStates.isStarted && wallet.publicKey && (
+                    <InfoBox>
+                      <p>Total items</p>
+                      <p>{candyMachineV3.items.available} </p>
+                    </InfoBox>
+                  )}{" "}
+                  {guardStates.isStarted && wallet.publicKey && (
+                    <InfoBox>
+                      <p>Price</p>
+                      <p>{candyPrice}</p>
+                    </InfoBox>
+                  )}
+                  <IconRow>
+                    <a
+                      href={websiteURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Globe></Globe>
+                    </a>
+                    <a
+                      href={twitterURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Twitter></Twitter>
+                    </a>
+                    <a
+                      href={discordURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Discord></Discord>
+                    </a>
+                  </IconRow>
+                </InfoRow>
+                <CollectionDescription>
+                  {collectionDescription}
+                </CollectionDescription>
+              </Content>
               <Other>
                 {!guardStates.isStarted ? (
                   <Countdown
@@ -651,7 +699,10 @@ const Home = (props: HomeProps) => {
                       ) : (
                         <>
                           <MintButton />
-
+                          <QRmodal
+                            connection="https://api.devnet.solana.com"
+                            cluster={"devnet"}
+                          />
                         </>
                       )}
                     </>
@@ -690,7 +741,11 @@ const Home = (props: HomeProps) => {
                   )}
                 </ProgressbarWrap>
 
-
+                <NftsModal
+                  openOnSolscan={openOnSolscan}
+                  mintedItems={mintedItems || []}
+                  setMintedItems={setMintedItems}
+                />
               </Other>
             </Column>
           </Container>

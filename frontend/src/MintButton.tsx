@@ -72,7 +72,39 @@ export const MintButton = ({
   }, [waitForActiveToken, gatewayStatus, onMint]);
 
   return (
-    <button>Mint</button>
-    
+    <CTAButton
+      disabled={loading || isSoldOut || isMinting || isEnded || !isActive || limitReached}
+      onClick={async () => {
+        if (isActive && gatekeeperNetwork) {
+          if (gatewayStatus === GatewayStatus.ACTIVE) {
+            await onMint(1);
+          } else {
+            setWaitForActiveToken(true);
+            await requestGatewayToken();
+          }
+        } else {
+          await onMint(1);
+        }
+      }}
+      variant="contained"
+    >
+      {!candyMachine ? (
+        "CONNECTING..."
+      ) : isSoldOut ? (
+        "SOLD OUT"
+      ) : limitReached ? (
+        "LIMIT REACHED"
+      ) : isActive ? (
+        isMinting || loading ? (
+          <CircularProgress />
+        ) : (
+          "MINT"
+        )
+      ) : isEnded ? (
+        "ENDED"
+      ) : (
+        "UNAVAILABLE"
+      )}
+    </CTAButton>
   );
 };
