@@ -1,0 +1,20 @@
+{
+  "number": 100,
+  "symbol": "PASS",
+  "sellerFeeBasisPoints": 200,
+  "isMutable": true,
+  "isSequential": false,
+  "creators": [
+    {
+      "address": "T2mFK92RUsk74Y5AdEcTfDy6j23hQ4gubYiFN9cYieh",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "awsConfig": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": null,
+  "guards": null
+}
