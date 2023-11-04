@@ -1,6 +1,6 @@
 # NFT tickets for your events, powered by the solana blockchain
 
-![Landing page](https://github.com/dustyapi/solana-ticketing-system/assets/88740093/f7f0abfe-37ba-4f74-b980-17bb3aead871)
+![Landing page](https://github.com/dustyapi/solana-ticketing-system/assets/88740093/c4ef69f6-020d-4d5e-ad7c-dbdbb926b0d1)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -46,8 +46,8 @@ npm i && npx expo
 
 This repository utilises the open source smartcontract developed by the team at @metaplex called candymachine for the fair minting of NFTs.
 
-[1] https://github.com/metaplex-foundation/candy-machine-ui
-[2] https://docs.metaplex.com/programs/candy-machine/overview
+1. https://github.com/metaplex-foundation/candy-machine-ui
+2. https://docs.metaplex.com/programs/candy-machine/overview
 
 
 
