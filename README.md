@@ -51,7 +51,7 @@ This repository utilises the open source smartcontract developed by the team at 
 
 
 ## Demo
-![Demo](https://github.com/dustyapi/solana-ticketing-system/assets/88740093/2fe1ba2e-6507-4869-9e81-1672b1fd7743)
+https://github.com/dustyapi/solana-ticketing-system/assets/88740093/2fe1ba2e-6507-4869-9e81-1672b1fd7743
 
 
 
