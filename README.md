@@ -20,12 +20,29 @@ The system, however, was pretty bugged. The NFT minting itself was free, and on 
 
 This year, about a month ago, I figured out how I could put together a system that mints NFTs as the tickets and, on top of it, adds functionality to let the user generate QR codes for such mini events where the user can redeem freebies with it, and hackout2023 seemed like a pretty nice opportunity to implement it, so here we are XD
 
+## Why a blockchain based ticketing system
+
+
+Adoption issues aside, there is a huge market for aftermarket sales of tickets.
+
+A ticket that you for an event like Lollapalooza or rather lets say a IND v PAK cricket match almost always has reselling potential.
+
+The barrier to this reselling is that you don't know the person who you could buy such a ticket from or who you could sell it to. This potential is one nft marketplace away from being unlocked if the tickets are blockchain based, and ofcourse the org that builds the system gets a cut from the additional transactions.
+
+So by using NFTs for tickets we achieve the following
+1. Ability to eventually re-sell tickets in a trust less manner, and since fair market conditions can be provided the price will be more reasonable for the general public.
+2. Retaining the ticket as a digital collectible forever.
+3. Added utiity can be provied because the above, for example merch if you attend all x types of events in a chain of events.
+
 
 ## Features
 
 - Each ticket is associated with a unique QR code, and once the QR code is scanned, the NFT itself can be transferred to another user (via sale on some marketplace). However, the original user won't have the ability to generate a new QR code using that same NFT.
 
-- To protect against spam, especially in the case of highly popular events, the smart contract in use automatically detects and blocks spamming attempts. It also imposes a non-refundable fee on spammers. Sweet!
+- To protect against spam, especially in the case of highly popular events, the smart contract in use automatically detects and blocks spamming attempts. It also imposes a non-refundable fee on spammers!
+
+- Due to the project being on solana, the tx cost is pretty much zero. And whatever cost that does go into minting the nft, it can be recovered by burning the NFT later if the buyer wishes to do so!
+
 
 ## Usage
 
