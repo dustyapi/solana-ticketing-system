@@ -5,7 +5,6 @@
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Smart Contracts](#smart-contracts)
 
@@ -28,7 +27,7 @@ This year, about a month ago, I figured out how I could put together a system th
 
 - To protect against spam, especially in the case of highly popular events, the smart contract in use automatically detects and blocks spamming attempts. It also imposes a non-refundable fee on spammers. Sweet!
 
-## Installation
+## Usage
 
 Frontend (NextJS)
 
