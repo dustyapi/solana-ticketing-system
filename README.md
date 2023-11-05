@@ -58,12 +58,12 @@ For the qr code scanning app (Expo+ReactNative)
 cd ./scanner-app 
 npm i && npx expo
 ```
-## Smart-contracts
+## Smart-contracts and Starter kits I used
 
 This repository utilises the open source smartcontract developed by the team at @metaplex called candymachine for the fair minting of NFTs.
 
-1. https://github.com/metaplex-foundation/candy-machine-ui
-2. https://docs.metaplex.com/programs/candy-machine/overview
+1. https://github.com/metaplex-foundation/candy-machine-ui (UI STARTER KIT)
+2. https://docs.metaplex.com/programs/candy-machine/overview (SMARTCONTRACT)
 
 
 ## Demo
